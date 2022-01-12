@@ -1,0 +1,13 @@
+
+
+
+model	theModel;
+
+patches(inlet
+outlet);
+
+
+theModelCoeffs{
+	alpha 0.3;
+	beta 2 inlet;
+}

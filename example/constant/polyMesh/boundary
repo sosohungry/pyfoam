@@ -1,0 +1,178 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+22
+(
+otherwall
+{
+    type wall;
+    nFaces 34652;
+    startFace 329501;
+}
+
+bottom1
+{
+    type wall;
+    nFaces 10;
+    startFace 364153;
+}
+
+bottom2
+{
+    type wall;
+    nFaces 5;
+    startFace 364163;
+}
+
+bottom3
+{
+    type wall;
+    nFaces 10;
+    startFace 364168;
+}
+
+bottom4
+{
+    type wall;
+    nFaces 10;
+    startFace 364178;
+}
+
+frontAndBack
+{
+    type empty;
+    nFaces 462544;
+    startFace 364188;
+}
+
+inlet1
+{
+    type wall;
+    nFaces 5;
+    startFace 826732;
+}
+
+inlet2
+{
+    type wall;
+    nFaces 4;
+    startFace 826737;
+}
+
+inlet3
+{
+    type wall;
+    nFaces 4;
+    startFace 826741;
+}
+
+inlet4
+{
+    type wall;
+    nFaces 4;
+    startFace 826745;
+}
+
+inlet5
+{
+    type wall;
+    nFaces 5;
+    startFace 826749;
+}
+
+inlet6
+{
+    type wall;
+    nFaces 5;
+    startFace 826754;
+}
+
+inlet7
+{
+    type wall;
+    nFaces 5;
+    startFace 826759;
+}
+
+out1
+{
+    type wall;
+    nFaces 5;
+    startFace 826764;
+}
+
+out2
+{
+    type wall;
+    nFaces 15;
+    startFace 826769;
+}
+
+out3
+{
+    type wall;
+    nFaces 5;
+    startFace 826784;
+}
+
+out4
+{
+    type wall;
+    nFaces 10;
+    startFace 826789;
+}
+
+top1
+{
+    type wall;
+    nFaces 34;
+    startFace 826799;
+}
+
+top2
+{
+    type wall;
+    nFaces 10;
+    startFace 826833;
+}
+
+top3
+{
+    type wall;
+    nFaces 5;
+    startFace 826843;
+}
+
+top4
+{
+    type wall;
+    nFaces 5;
+    startFace 826848;
+}
+
+top5
+{
+    type wall;
+    nFaces 6;
+    startFace 826853;
+}
+
+)
+
+
+// ************************************************************************* //

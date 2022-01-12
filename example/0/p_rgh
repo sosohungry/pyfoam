@@ -1,0 +1,134 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      p_rgh;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 1 -1 -2 0 0 0 0 ];
+
+internalField   uniform 0;
+
+boundaryField
+{    
+    otherwall
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    bottom1
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    bottom2
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    bottom3
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    bottom4
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    frontAndBack
+    {
+        type             empty;
+    }
+    inlet1
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    inlet2
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    inlet3
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    inlet4
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    inlet5
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    inlet6
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    inlet7
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    out1
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    out2
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    out3
+    {
+        type            fixedValue;
+        value           uniform 0;
+    }
+    out4
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    top1
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    top2
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    top3
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    top4
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+    top5
+    {
+        type            fixedFluxPressure;
+        value           uniform 0;
+    }
+}
+// ************************************************************************* //

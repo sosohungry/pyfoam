@@ -1,0 +1,137 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 0 1 -1 0 0 0 0 ];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    otherwall
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    bottom1
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    bottom2
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    bottom3
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    bottom4
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
+    inlet1
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    inlet2
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    inlet3
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    inlet4
+    {
+        type            fixedValue;
+        value           uniform (0.01 0 0);
+    }
+    inlet5
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    inlet6
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    inlet7
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    out1
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    out2
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    out3
+    {
+        type            inletOutlet;
+        value           uniform (0 0 0);
+        inletValue      uniform (0 0 0);
+    }
+    out4
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    top1
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    top2
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    top3
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    top4
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+    top5
+    {
+        type            fixedValue;
+        value           uniform (0 0 0);
+    }
+}
+
+
+// ************************************************************************* //

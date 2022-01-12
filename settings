@@ -1,0 +1,29 @@
+
+
+//
+sourceCase     *****;
+targetDir      *****; 
+Time           *****;
+
+changeViscosity 
+{
+    enable    true/false;
+    water     (10  20  30  40  50); 
+	oil       (89  80  50  50  20); 
+}  
+
+changeTensionCoeffs 
+{
+    enable     true/false;
+	value      (0.005 0.05 0.06 0.2); 
+}
+
+
+changeVelocity 
+{
+    enable   true/false;
+	boundaryName    *** ;
+	value     ((0.01 0 0)  (0.02 0 0)  (0.03 0 0)); 
+}
+
+

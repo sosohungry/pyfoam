@@ -1,0 +1,172 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      alpha.water;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [ 0 0 0 0 0 0 0 ];
+
+internalField   uniform 0;
+
+boundaryField
+{
+    otherwall
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    bottom1
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    bottom2
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    bottom3
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    bottom4
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
+    inlet1
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    inlet2
+    {
+         type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    inlet3
+    {
+         type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    inlet4
+    {
+        type            fixedValue;
+        value           uniform 1;
+    }
+    inlet5
+    {
+         type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    inlet6
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    inlet7
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    out1
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    out2
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    out3
+    {
+        type            zeroGradient;
+    }
+    out4
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    top1
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    top2
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    top3
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    top4
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+    top5
+    {
+        type            constantAlphaContactAngle;
+        theta0          45;
+        limit           gradient;
+        value           uniform 0;
+    }
+}
+
+// ************************************************************************* //
