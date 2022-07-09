@@ -1,5 +1,5 @@
-from changfile import *
-from setDefault import setDefault
+from code.changfile import *
+from code.setDefault import setDefault
 
 def main():
 

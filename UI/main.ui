@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>253</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>PreProcess</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTreeWidget" name="treeWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>231</width>
+      <height>521</height>
+     </rect>
+    </property>
+    <column>
+     <property name="text">
+      <string>Chose</string>
+     </property>
+    </column>
+    <item>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>alpha.water</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>p_rgh</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>U</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>constant</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>transportProperties</string>
+      </property>
+     </item>
+    </item>
+    <item>
+     <property name="text">
+      <string>system</string>
+     </property>
+     <item>
+      <property name="text">
+       <string>controlDict</string>
+      </property>
+     </item>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>253</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOpen">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+   </widget>
+   <addaction name="menuOpen"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

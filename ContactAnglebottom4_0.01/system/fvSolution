@@ -1,0 +1,189 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    location    "system";
+    object      fvSolution;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+solvers
+{
+    alpha.water
+    {
+        nAlphaCorr      1;
+        nAlphaSubCycles 2;
+        cAlpha          1;
+    }
+
+    "pcorr.*"
+    {
+/*        solver          PCG;
+        preconditioner  DIC;
+        tolerance       1e-5;
+        relTol          0;
+ */
+        solver petsc;
+
+        petsc
+        {
+            options
+            {
+                ksp_type  cg;
+                ksp_cg_single_reduction  true;
+                ksp_norm_type none;
+
+// With or without hypre
+#if 0
+                pc_type  hypre;
+                pc_hypre_type boomeramg;
+                pc_hypre_boomeramg_max_iter "1";
+                pc_hypre_boomeramg_strong_threshold "0.25";
+                pc_hypre_boomeramg_grid_sweeps_up "1";
+                pc_hypre_boomeramg_grid_sweeps_down "1";
+                pc_hypre_boomeramg_agg_nl "1";
+                pc_hypre_boomeramg_agg_num_paths "1";
+                pc_hypre_boomeramg_max_levels "25";
+                pc_hypre_boomeramg_coarsen_type HMIS;
+                pc_hypre_boomeramg_interp_type ext+i;
+                pc_hypre_boomeramg_P_max "1";
+                pc_hypre_boomeramg_truncfactor "0.3";
+#else
+                pc_type bjacobi;
+                sub_pc_type ilu;
+#endif
+            }
+
+            caching
+            {
+                matrix
+                {
+                    update always;
+                }
+
+                preconditioner
+                {
+                    update always;
+                }
+            }
+        }
+
+        tolerance       1e-07;
+        relTol          0;
+ 
+ 
+ 
+ 
+    }
+
+    p_rgh
+    {
+
+
+
+
+
+
+
+
+        solver petsc;
+
+        petsc
+        {
+            options
+            {
+                ksp_type  cg;
+                ksp_cg_single_reduction  true;
+                ksp_norm_type none;
+
+// With or without hypre
+#if 0
+                pc_type  hypre;
+                pc_hypre_type boomeramg;
+                pc_hypre_boomeramg_max_iter "1";
+                pc_hypre_boomeramg_strong_threshold "0.25";
+                pc_hypre_boomeramg_grid_sweeps_up "1";
+                pc_hypre_boomeramg_grid_sweeps_down "1";
+                pc_hypre_boomeramg_agg_nl "1";
+                pc_hypre_boomeramg_agg_num_paths "1";
+                pc_hypre_boomeramg_max_levels "25";
+                pc_hypre_boomeramg_coarsen_type HMIS;
+                pc_hypre_boomeramg_interp_type ext+i;
+                pc_hypre_boomeramg_P_max "1";
+                pc_hypre_boomeramg_truncfactor "0.3";
+#else
+                pc_type bjacobi;
+                sub_pc_type ilu;
+#endif
+            }
+
+            caching
+            {
+                matrix
+                {
+                    update always;
+                }
+
+                preconditioner
+                {
+                    update always;
+                }
+            }
+        }
+
+        tolerance       1e-07;
+        relTol          0.01;
+
+
+
+
+
+
+
+
+
+        /*solver          PCG;
+        preconditioner  DIC;
+        tolerance       1e-07;
+        relTol          0.05;
+        solver          GAMG;
+        tolerance       1e-06;
+        relTol          0.01;
+        smoother        DIC;*/
+    }
+
+    p_rghFinal
+    {
+        $p_rgh;
+        tolerance       1e-06;
+        relTol          0;
+    }
+
+    U
+    {
+        solver          smoothSolver;
+        smoother        symGaussSeidel;
+        tolerance       1e-06;
+        relTol          0;
+    }
+}
+
+PIMPLE
+{
+    momentumPredictor no;
+    nCorrectors     2;
+    nNonOrthogonalCorrectors 0;
+        pRefPoint       (-0.001 0.003 0);
+    pRefValue      0;
+}
+
+
+// ************************************************************************* //
